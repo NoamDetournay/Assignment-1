@@ -10,4 +10,6 @@ With Marstercheap, you can make informed choices:
 Run index.js with :
 > npm run start
 
+___Author___ : Noâm Detournay
+
 

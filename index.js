@@ -1,2 +1,4 @@
-console.log("Hello World");
-console.log("Hello World2");
+function welcome() {
+    return "Welcome to MasterCheap !";
+}
+console.log(welcome());
