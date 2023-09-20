@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f2029;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour le titre */
+h1 {
+    font-size: 24px;
+    color: #f6e28b;
+}
+
+/* Styles pour les paragraphes */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f6e28b;
+}
+
+/* Styles pour les boutons */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour la réponse */
+#response {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #f6e28b;
+}
+a{
+    color : #f6e28b;
+}
+a:hover{
+    color : #d2bf76;
+}

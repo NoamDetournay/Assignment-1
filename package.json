@@ -1,10 +1,12 @@
 {
   "name": "assignment1",
+  "type" : "module",
   "version": "1.0.0",
   "description": "Marstercheap is a powerful tool designed to revolutionize your **grocery shopping experience**. \r With Marstercheap, you can make informed choices:\r - Save _money_,\r - Prioritize your _health_, \r - All in one **user-friendly** platform.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node index.js"
   },
   "keywords": [],
   "author": "Noâm Detournay",

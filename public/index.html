@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles/index.css">
+    <meta charset="UTF-8">
+    <title>MasterCheap</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Express page</p>
+    <!-- AJAX Request -->
+    <button onclick="fetchData(1)">Obtenir des données avec 1</button>
+    <button onclick="fetchData(2)">Obtenir des données avec 2</button>
+
+    <!-- The response of the request -->
+    <div id="response"></div>
+
+    <footer>
+        <a href="/a_propos.html">About MasterCheap</a>
+    </footer>
+
+    <!-- JavaScript script for AJAX request -->
+    <script>
+        function fetchData(number) {
+            // Effectuer une requête AJAX
+            fetch(`/api/data/${number}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Mettre à jour l'interface utilisateur avec la réponse JSON
+                    document.getElementById('response').textContent = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.error('Error with the AJAX request:', error);
+                });
+        }
+    </script>
+</body>
+</html>
