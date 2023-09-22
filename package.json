@@ -1,20 +1,21 @@
 {
   "name": "assignment1",
-  "type" : "module",
+  "type": "module",
   "version": "1.0.0",
   "description": "Marstercheap is a powerful tool designed to revolutionize your **grocery shopping experience**. \r With Marstercheap, you can make informed choices:\r - Save _money_,\r - Prioritize your _health_, \r - All in one **user-friendly** platform.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node index.js"
+    "test": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Noâm Detournay",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "assignment-1"

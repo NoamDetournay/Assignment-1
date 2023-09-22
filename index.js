@@ -1,4 +1,6 @@
 import express from 'express'
+import { epExport } from './public/script/function.js'
+
 const app = express();
 const port = process.env.PORT || 3000; // Port par défaut 3000
 
@@ -9,16 +11,14 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.sendFile( 'index.html');
 });
+app.get('/a_propos.html', (req, res) => {
+    res.sendFile( 'a_propos.html');
+});
 
 // Endpoint dynamique
-app.get('/api/data/:number', (req, res) => {
-    const number = req.params.number;
-    // Vous pouvez utiliser la valeur du nombre pour générer une réponse JSON ici
-    const responseData = { result: `You provided the value ${number}` };
-    res.json(responseData);
-});
-app.use((req, res, next) => {
-    res.status(404).send("Page not found <br> <a href=\"/\">Go main menu</a>");
+app.get('/api/data/:number', epExport);
+app.use((req, res) => {
+    res.sendStatus( 404);
 });
 
 // Server start
