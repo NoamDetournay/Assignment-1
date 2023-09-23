@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
 app.get('/a_propos.html', (req, res) => {
     res.sendFile( 'a_propos.html');
 });
+app.get('/404.html', (req, res) => {
+    res.sendFile( '404.html');
+});
 
 // Endpoint dynamique
 app.get('/api/data/:number', epExport);
