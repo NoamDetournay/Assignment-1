@@ -1,5 +1,5 @@
 CREATE TABLE users(
-   id_user SMALLINT,
+   id_user SERIAL,
    user_name VARCHAR(20) NOT NULL,
    user_password VARCHAR(15) NOT NULL,
    user_email VARCHAR(50) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE users(
 );
 
 CREATE TABLE product(
-   id_product SMALLINT,
+   id_product SERIAL,
    prod_name VARCHAR(30) NOT NULL,
    prod_price DECIMAL(15,2) NOT NULL,
    prod_price_unit DECIMAL(15,2),
@@ -20,7 +20,7 @@ CREATE TABLE product(
 );
 
 CREATE TABLE tag(
-   id_tag SMALLINT,
+   id_tag SERIAL,
    tag_name VARCHAR(20) NOT NULL,
    tag_description VARCHAR(100),
    tag_img VARCHAR(100),
@@ -28,26 +28,26 @@ CREATE TABLE tag(
 );
 
 CREATE TABLE shopping_list(
-   id_shopping_list SMALLINT,
+   id_shopping_list SERIAL,
    shopping_list_name VARCHAR(50) NOT NULL,
    shopping_list_date DATE NOT NULL,
    shopping_list_desc VARCHAR(50),
-   id_user SMALLINT NOT NULL,
+   id_user INTEGER NOT NULL,
    PRIMARY KEY(id_shopping_list),
    FOREIGN KEY(id_user) REFERENCES users(id_user)
 );
 
 CREATE TABLE CORRESPOND(
-   id_product SMALLINT,
-   id_tag SMALLINT,
+   id_product INTEGER,
+   id_tag INTEGER,
    PRIMARY KEY(id_product, id_tag),
    FOREIGN KEY(id_product) REFERENCES product(id_product),
    FOREIGN KEY(id_tag) REFERENCES tag(id_tag)
 );
 
 CREATE TABLE POSSESS(
-   id_product SMALLINT,
-   id_shopping_list SMALLINT,
+   id_product INTEGER,
+   id_shopping_list INTEGER,
    quantity SMALLINT NOT NULL,
    PRIMARY KEY(id_product, id_shopping_list),
    FOREIGN KEY(id_product) REFERENCES product(id_product),

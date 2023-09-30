@@ -38,7 +38,7 @@ where product.id_product = possess.id_product
 and possess.id_shopping_list = shopping_list.id_shopping_list
 and shopping_list.id_user = 1;
 
--- select all the products with the tag "fruit" and product name containing "Apple"
+-- select all the information of the products with the tag "fruit" and product name containing "Apple"
 SELECT
     product.id_product,
     product.prod_name,
