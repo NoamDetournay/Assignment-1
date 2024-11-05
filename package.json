@@ -13,7 +13,7 @@
   "author": "Noâm Detournay",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
+    "express": "^4.21.1",
     "nodemon": "^3.0.1"
   },
   "repository": {
